@@ -1,5 +1,5 @@
-#ifndef C_TOKEN
-#define C_TOKEN
+#ifndef TOKEN_H
+#define TOKEN_H
 
 typedef struct {
   const char *token;
@@ -17,4 +17,4 @@ typedef struct {
 token_t *init_token(const char *tok, int type);
 
 void print_token(token_t *tok);
-#endif
+#endif // TOKEN_H
