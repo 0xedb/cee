@@ -26,6 +26,8 @@ enum token_type {
   EQL,   /* == */
   NQL,   /* != */
 
+  // TODO: add colon, parenthesis
+
   // keywords
   keyword_beg,
   FUNCTION, /* fn */

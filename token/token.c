@@ -15,7 +15,7 @@ const char *tokens[] = {
 
 };
 
-void token_print(token_t *t) { printf("%s: %s", tokens[t->type], t->literal); }
+void token_print(token_t *t) { printf("%s: %s\n", tokens[t->type], t->literal); }
 
 _Bool token_is_letter(char c) {
   return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') || (c == '_');
