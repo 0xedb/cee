@@ -170,7 +170,7 @@ token_t *lexer_next_token(lexer_t *l) {
   default:
     if (token_is_letter(l->ch)) {
       tok->literal = lexer_read_identifier(l);
-      tok->type = IDENT;
+      tok->type = token_lookup_identifier(tok->literal);
       return tok;
     } else if (token_is_number(l->ch)) {
       tok->literal = lexer_read_number(l);
