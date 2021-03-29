@@ -1,10 +1,16 @@
-#include <stdio.h>
+
+#include "lexer/lexer.h"
 #include "token/token.h"
+#include <stdio.h>
 
 int main() {
 
-  token_t *tok = token_init("name", 21);
-  token_print(tok);
+  const char *input = "__jay 3}{[ama!=+-*/~!!~==";
 
-  printf("\n%u", token_is_keyworkd(tok));
+  lexer_t *l = lexer_init(input);
+
+  for (token_t *tok = lexer_next_token(l); tok->type != END;
+       tok = lexer_next_token(l)) {
+    token_print(tok);
+  }
 }
