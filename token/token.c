@@ -17,11 +17,6 @@ const char *tokens[] = {
 
 };
 
-// const char* keywords[] = {
-//     [FUNCTION] = "fn",     [LET] = "let",     [IF] = "if",     [EL] = "el",
-//     [RET] = "ret",
-// }
-
 void token_print(token_t *t) {
   printf("%s \t %s\n", tokens[t->type], t->literal);
 }
