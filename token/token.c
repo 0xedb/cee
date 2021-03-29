@@ -1,4 +1,4 @@
-#include "token.h" 
+#include "token.h"
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,8 +10,7 @@ const char *tokens[] = {
     [IDENT] = "IDENT",     [INT] = "int",     [STRING] = "\"", [ASSIGN] = "=",
     [COMMA] = ",",         [SEMICOLON] = ";", [PLUS] = "+",    [MINUS] = "-",
     [DIV] = "/",           [MULT] = "*",      [LST] = "<",     [GRT] = ">",
-    [EQL] = "==",          [NQL] = "!=",      [NOT] = "!",
-
+    [EQL] = "==",          [NQL] = "!=",      [NOT] = "!",     [DOT] = ".",
     [FUNCTION] = "fn",     [LET] = "let",     [IF] = "if",     [EL] = "el",
     [RET] = "ret",         [COLON] = ":",     [LPAREN] = "(",  [RPAREN] = ")",
     [LCURL] = "{",         [RCURL] = "}",     [LBRAC] = "[",   [RBRAC] = "]",
@@ -44,12 +43,12 @@ token_t *token_init(const char *t, int type) {
   return token;
 }
 
-enum token_type token_lookup_identifier(const char *ch) { 
-  for (size_t i = keyword_beg + 1; i < keyword_end; ++i) { 
-    if (strcmp(tokens[i], ch) == 0) { 
+enum token_type token_lookup_identifier(const char *ch) {
+  for (size_t i = keyword_beg + 1; i < keyword_end; ++i) {
+    if (strcmp(tokens[i], ch) == 0) {
       return i;
     }
-  } 
+  }
 
   return IDENT;
 }

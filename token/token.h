@@ -14,6 +14,7 @@ enum token_type {
   // delimiters
   COMMA,     /* , */
   SEMICOLON, /* ; */
+  DOT,       /* . */
 
   // operators
   PLUS,  /* + */
@@ -27,13 +28,13 @@ enum token_type {
   NQL,   /* != */
 
   // TODO: add colon, parenthesis
-  COLON,
-  LPAREN,
-  RPAREN,
-  LCURL,
-  RCURL,
-  LBRAC,
-  RBRAC,
+  COLON,  /* : */
+  LPAREN, /* ( */
+  RPAREN, /* ) */
+  LCURL,  /* { */
+  RCURL,  /* } */
+  LBRAC,  /* [ */
+  RBRAC,  /* ] */
 
   // keywords
   keyword_beg,
@@ -57,6 +58,6 @@ void token_print(token_t *t);
 _Bool token_is_keyworkd(token_t *t);
 _Bool token_is_letter(char c);
 _Bool token_is_number(char c);
-enum token_type token_lookup_identifier(const char* ch);
+enum token_type token_lookup_identifier(const char *ch);
 
 #endif /* TOKEN_H */
