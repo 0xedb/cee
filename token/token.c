@@ -8,7 +8,7 @@ const char *tokens[] = {
     [IDENT] = "IDENT",     [INT] = "int",     [STRING] = "\"", [ASSIGN] = "=",
     [COMMA] = ",",         [SEMICOLON] = ";", [PLUS] = "+",    [MINUS] = "-",
     [DIV] = "/",           [MULT] = "*",      [LST] = "<",     [GRT] = ">",
-    [EQL] = "==",          [NQL] = "!=",
+    [EQL] = "==",          [NQL] = "!=",      [NOT] = "!",
 
     [FUNCTION] = "fn",     [LET] = "let",     [IF] = "if",     [EL] = "el",
     [RET] = "ret"

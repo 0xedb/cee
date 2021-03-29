@@ -20,6 +20,7 @@ enum token_type {
   MINUS, /* - */
   DIV,   /* / */
   MULT,  /* * */
+  NOT,   /* ! */
   LST,   /* < */
   GRT,   /* > */
   EQL,   /* == */
