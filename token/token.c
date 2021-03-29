@@ -1,4 +1,5 @@
 #include "token.h"
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,13 +16,13 @@ const char *tokens[] = {
 
 };
 
-void token_print(token_t *t) { printf("%s: %s\n", tokens[t->type], t->literal); }
-
-_Bool token_is_letter(char c) {
-  return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') || (c == '_');
+void token_print(token_t *t) {
+  printf("%s \t %s\n", tokens[t->type], t->literal);
 }
 
-_Bool token_is_number(char c) { return c >= 0 && c <= 9; }
+_Bool token_is_letter(char c) { return isalpha(c) || (c == '_'); }
+
+_Bool token_is_number(char c) { return isdigit(c); }
 
 _Bool token_is_keyworkd(token_t *t) {
   return t->type > keyword_beg && t->type < keyword_end;
