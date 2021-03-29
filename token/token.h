@@ -44,7 +44,9 @@ typedef struct {
 } token_t;
 
 token_t *token_init(const char *value, int type);
-void token_print(token_t *tok);
-_Bool token_is_keyworkd(token_t *tok);
+void token_print(token_t *t);
+_Bool token_is_keyworkd(token_t *t);
+_Bool token_is_letter(char c);
+_Bool token_is_number(char c);
 
 #endif /* TOKEN_H */

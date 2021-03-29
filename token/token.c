@@ -15,18 +15,22 @@ const char *tokens[] = {
 
 };
 
-void token_print(token_t *tok) {
-  printf("%s: %s", tokens[tok->type], tok->literal);
+void token_print(token_t *t) { printf("%s: %s", tokens[t->type], t->literal); }
+
+_Bool token_is_letter(char c) {
+  return 'a' <= c && c <= 'z' || 'A' <= c && c <= 'Z' || c == '_';
 }
 
-_Bool token_is_keyworkd(token_t *tok) {
-  return tok->type > keyword_beg && tok->type < keyword_end;
+_Bool token_is_number(char c) { return c >= 0 && c <= 9; }
+
+_Bool token_is_keyworkd(token_t *t) {
+  return t->type > keyword_beg && t->type < keyword_end;
 }
 
-token_t *token_init(const char *tok, int type) {
+token_t *token_init(const char *t, int type) {
   token_t *token = (token_t *)calloc(1, sizeof(token_t));
 
-  token->literal = tok;
+  token->literal = t;
   token->type = type;
 
   return token;
