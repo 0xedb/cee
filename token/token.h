@@ -57,5 +57,6 @@ void token_print(token_t *t);
 _Bool token_is_keyworkd(token_t *t);
 _Bool token_is_letter(char c);
 _Bool token_is_number(char c);
+enum token_type token_lookup_identifier(const char* ch);
 
 #endif /* TOKEN_H */
