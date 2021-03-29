@@ -12,7 +12,8 @@ const char *tokens[] = {
     [EQL] = "==",          [NQL] = "!=",      [NOT] = "!",
 
     [FUNCTION] = "fn",     [LET] = "let",     [IF] = "if",     [EL] = "el",
-    [RET] = "ret"
+    [RET] = "ret",         [COLON] = ":",     [LPAREN] = "(",  [RPAREN] = ")",
+    [LCURL] = "{",         [RCURL] = "}",     [LBRAC] = "[",   [RBRAC] = "]",
 
 };
 

@@ -27,6 +27,13 @@ enum token_type {
   NQL,   /* != */
 
   // TODO: add colon, parenthesis
+  COLON,
+  LPAREN,
+  RPAREN,
+  LCURL,
+  RCURL,
+  LBRAC,
+  RBRAC,
 
   // keywords
   keyword_beg,
