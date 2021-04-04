@@ -15,21 +15,18 @@ const char *GREETING =
     "░ ░         ░  ░   ░  ░       ░  ░     ░  ░         ░       ░ \n"
     "░                                                             \n";
 
+void repl_start(FILE *in, FILE *out) {
+  puts(GREETING);
+  puts("\nWelcome to the Cee(lang) Programming Language");
 
-void repl_start(FILE* in, FILE* out) {
-    puts("Welcome to the Cee(lang) Programming Language");
-    puts(GREETING);
+  // while(1) {
+  //     puts(PROMPT);
 
-    // while(1) {
-    //     puts(PROMPT);
+  // get input
 
-        // get input
+  // use lexer on it
 
-        // use lexer on it
+  // output
 
-
-        // output
-
-    // }
-    
+  // }
 }
